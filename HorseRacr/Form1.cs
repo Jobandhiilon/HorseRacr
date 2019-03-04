@@ -68,9 +68,9 @@ namespace HorseRacr
 
 
             //pass the name of  the players and money to recpectively buddies class
-            objBuddies[0] = new Buddies("Harpreet", null, 90, chkHarpreet, lblHarpreet);
-            objBuddies[1] = new Buddies("Joban", null, 100, chkJoban,lblJoban);
-            objBuddies[2] = new Buddies("Happy", null, 80, chkHappy, lblHappy);
+            objBuddies[0] = new Buddies("Harpreet", null, 50, chkHarpreet, lblHarpreet);
+            objBuddies[1] = new Buddies("Joban", null, 50, chkJoban,lblJoban);
+            objBuddies[2] = new Buddies("Happy", null, 50, chkHappy, lblHappy);
 
 
             // this foreach loop is used for printing the name of players on label using the object of Guy class with the help of object
@@ -88,7 +88,7 @@ namespace HorseRacr
             //pass the value to label after selecting the check box
             if (chkHarpreet.Checked == true){
                 lblPlayer.Text = "Harpreet";
-                Amount = 90;
+                Amount = 50;
                 chkJoban.Checked = false;
                 chkHappy.Checked = false;
             }
@@ -103,7 +103,7 @@ namespace HorseRacr
             if (chkJoban.Checked == true)
             {
                 lblPlayer.Text = "Joban";
-                Amount = 100;
+                Amount = 50;
                 chkHarpreet.Checked = false;
                 chkHappy.Checked = false;
             }
@@ -115,7 +115,7 @@ namespace HorseRacr
             if (chkHappy.Checked == true)
             {
                 lblPlayer.Text = "Happy";
-                Amount = 80;
+                Amount = 50;
                 chkHarpreet.Checked = false;
                 chkJoban.Checked = false;
             }
@@ -125,15 +125,15 @@ namespace HorseRacr
         {
             // bet trigger that is used to check the first of all the bet amount if it is less than 9 then generate an error message
             int BuddiesNumber = 0;
-            if (betAmount.Value < 9) {
-                MessageBox.Show("You Must have to fill the Bet amount more then 9 dollar");
+            if (betAmount.Value < 1) {
+                MessageBox.Show("You Must have to fill the Bet amount more then 1 dollar");
             }
             // check the horse value it must be between range like 0 to 3
             else if (nmHorse.Value==0 || nmHorse.Value>3) {
                 MessageBox.Show("Horse Value must be between 1 to 3");
             }
             //after all type of verifcation set the bet so thus game can be start 
-            else if (!lblPlayer.Text.Equals("") && betAmount.Value >= 9 && nmHorse.Value > 0 && nmHorse.Value < 4)
+            else if (!lblPlayer.Text.Equals("") && betAmount.Value >= 1 && nmHorse.Value > 0 && nmHorse.Value < 4)
             {
                 //verify the bet amount after verifying the amount of the player
                 if (objbetSetting.betAmountVerify(lblPlayer.Text, Convert.ToInt32(betAmount.Value)))
@@ -170,7 +170,7 @@ namespace HorseRacr
                 //generate an error message
                 else
                 {
-                    MessageBox.Show("You must have to select a Player and Select the Amount more than 9 dollar and suitable Horse No");
+                    MessageBox.Show("You must have to select a Player and Select the Amount more than 1 dollar and suitable Horse No");
                 }
             }
             else {
@@ -188,13 +188,13 @@ namespace HorseRacr
         private void betAmount_ValueChanged(object sender, EventArgs e)
         {
             //verify the bet amount means if the player has not enough money and set the bet amount more then that then it will genrate an error message
-            if (lblPlayer.Text.Equals("Harpreet") && betAmount.Value>90) {
+            if (lblPlayer.Text.Equals("Harpreet") && betAmount.Value<1) {
                 MessageBox.Show("You didn't have Enough Balance");
             }
-            if (lblJoban.Text.Equals("Joban") && betAmount.Value > 100) {
+            if (lblJoban.Text.Equals("Joban") && betAmount.Value <1) {
                 MessageBox.Show("You didn't have Enough Balance");
             }
-            if (lblHappy.Text.Equals("Happy") && betAmount.Value>80) {
+            if (lblHappy.Text.Equals("Happy") && betAmount.Value<1) {
                 MessageBox.Show("You didn't have Enough Balance");
             }
         }

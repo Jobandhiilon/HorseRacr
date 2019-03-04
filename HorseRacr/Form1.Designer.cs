@@ -189,7 +189,7 @@
             this.chkHarpreet.Name = "chkHarpreet";
             this.chkHarpreet.Size = new System.Drawing.Size(167, 23);
             this.chkHarpreet.TabIndex = 12;
-            this.chkHarpreet.Text = "Harpreet has 90 Dollar";
+            this.chkHarpreet.Text = "Harpreet has 50 Dollar";
             this.chkHarpreet.UseVisualStyleBackColor = false;
             this.chkHarpreet.CheckedChanged += new System.EventHandler(this.chkHarpreet_CheckedChanged);
             // 
@@ -201,9 +201,9 @@
             this.chkJoban.ForeColor = System.Drawing.Color.Black;
             this.chkJoban.Location = new System.Drawing.Point(7, 340);
             this.chkJoban.Name = "chkJoban";
-            this.chkJoban.Size = new System.Drawing.Size(157, 23);
+            this.chkJoban.Size = new System.Drawing.Size(149, 23);
             this.chkJoban.TabIndex = 13;
-            this.chkJoban.Text = "Joban has 100 Dollar";
+            this.chkJoban.Text = "Joban has 50 Dollar";
             this.chkJoban.UseVisualStyleBackColor = false;
             this.chkJoban.CheckedChanged += new System.EventHandler(this.chkJoban_CheckedChanged);
             // 
@@ -217,7 +217,7 @@
             this.chkHappy.Name = "chkHappy";
             this.chkHappy.Size = new System.Drawing.Size(154, 23);
             this.chkHappy.TabIndex = 14;
-            this.chkHappy.Text = "Happy has 80 Dollar";
+            this.chkHappy.Text = "Happy has 50 Dollar";
             this.chkHappy.UseVisualStyleBackColor = false;
             this.chkHappy.CheckedChanged += new System.EventHandler(this.chkHappy_CheckedChanged);
             // 
